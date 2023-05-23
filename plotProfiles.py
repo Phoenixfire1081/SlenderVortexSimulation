@@ -61,6 +61,7 @@ yp_FR07 = readData(filepath, 'y_dir_FR07.txt')
 yp_FRinf = readData(filepath, 'y_dir_FRinf.txt')
 
 # Plot the profiles
+plt.rcParams.update({'font.size': 22})
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3,)
 ax1.semilogy(FR02Velx, yp_FR02, 'k--', label = 'S_1')
 ax1.semilogy(FR07Velx, yp_FR07, 'k:', label = 'S_2')
