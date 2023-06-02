@@ -6,7 +6,7 @@ Please note that this page is currently __under construction__ and the codes wil
 
 ## Velocity profiles
 
-The velocity profiles have been uploaded for three Ekman flow cases: N, S_1, S_2. Case N corresponds to a neutrally stratified case and cases S_1 and S_2 are the stably stratified cases. Details of the simulation can be found in the preprint, Ansorge and Mellado (2014, 2016) and the PhD thesis of Ansorge (2016).
+The velocity profiles have been uploaded with the permission of Dr. Cedrick Ansorge for three Ekman flow cases: N, S_1, S_2. Case N corresponds to a neutrally stratified case and cases S_1 and S_2 are the stably stratified cases. Details of the simulation can be found in the preprint, Ansorge and Mellado (2014, 2016) and the PhD thesis of Ansorge (2016). The code used for the simulation can be found here: https://github.com/turbulencia/tlab. 
 
 ```
 python3 plotProfiles.py
