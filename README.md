@@ -17,7 +17,7 @@ python3 plotProfiles.py
 ## Slender vortex filament code
 
 * This code computes the motion of slender vortex filaments with two methods: Local induction approximation (LIA) and the M1 Klein-Knio (M1 KK) scheme. Details of both methods can be found in the preprint.
-* It is based on the ezvortex code, written in C, by Daniel Margerit. See the original C code and the corresponding publications here: https://github.com/danielmargerit/ezvortex.
+* It is based on the ezvortex code, written in C, by Dr. Daniel Margerit. See the original C code and the corresponding publications here: https://github.com/danielmargerit/ezvortex.
 
 ## Additional references
 
