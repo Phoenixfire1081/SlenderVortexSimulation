@@ -35,7 +35,7 @@ make
 ```
 ### Stagnant background flow
 
-An example python template for a stagnant background flow is given. Comments have been added to explain the various parameters and flags. By default, it runs the LIA method in python with numba mode.
+An example python template for a stagnant background flow is given (Simulation_stagnant.py). Comments have been added to explain the various parameters and flags. By default, it runs the LIA method in python with numba mode.
 
 ### Performance
 
