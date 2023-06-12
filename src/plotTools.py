@@ -19,7 +19,8 @@ def plotFunc(filename, nsteps, NP, writeEveryNSteps):
 	ctrB = 3
 	ctrE = NP
 	
-	ax = plt.figure().gca(projection='3d')
+	fig = plt.figure()
+	ax = fig.add_subplot(projection='3d')
 	ax.set_xlabel('x')
 	ax.set_ylabel('y')
 	ax.set_zlabel('z')
