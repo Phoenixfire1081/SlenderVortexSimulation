@@ -35,7 +35,7 @@ make
 ```
 ### Stagnant background flow
 
-An example python template for a stagnant background flow is given (Simulation_stagnant.py). Comments have been added to explain the various parameters and flags. By default, it runs the LIA method in python with numba mode.
+Example python templates for a stagnant background flow are given (Simulation_stagnant_*.py). Comments have been added to explain the various parameters and flags. Simulation_stagnant_LIA.py and Simulation_stagnant_M1KK.py run with LIA and M1 KK methods respectively in python with numba mode. Simulation_stagnant_M1KK_PF.py and Simulation_stagnant_M1KK_FF.py are templates which run the partial FORTRAN and full FORTRAN modes respectively. NOTE: FORTRAN code has to be compiled before running these templates. 
 
 ### Performance
 
