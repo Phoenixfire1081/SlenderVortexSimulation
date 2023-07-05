@@ -16,8 +16,8 @@ def plotFunc(filename, nsteps, NP, writeEveryNSteps):
 	
 	data = np.loadtxt(filename)
 	
-	ctrB = 3
-	ctrE = NP
+	ctrB = 2
+	ctrE = NP-2
 	
 	fig = plt.figure()
 	ax = fig.add_subplot(projection='3d')
@@ -39,8 +39,8 @@ def plotFunc(filename, nsteps, NP, writeEveryNSteps):
 			# Rest are colored black
 			ax.plot(data[ctrB:ctrE, 0], data[ctrB:ctrE, 1], data[ctrB:ctrE, 2], 'k')
 	
-		ctrB = ctrB + NP;
-		ctrE = ctrE + NP;
+		ctrB = ctrB + NP + 2;
+		ctrE = ctrE + NP + 2;
 	
 	ax.grid(False)
 	ax.azim = -90
