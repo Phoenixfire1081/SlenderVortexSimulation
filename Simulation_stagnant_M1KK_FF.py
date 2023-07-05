@@ -15,8 +15,8 @@ start_time = time.time()
 
 # Author: Abhishek Harikrishnan
 # Email: abhishek.harikrishnan@fu-berlin.de
-# Last updated: 02-06-2023
-# Stagnant flow test template
+# Last updated: 05-07-2023
+# Stagnant flow test template with M1 KK method and full FORTRAN mode
 
 #---------------------------------------------------------------------#
 
@@ -31,10 +31,10 @@ start_time = time.time()
 NP = 901 
 
 # Time step
-ts = 0.00001 
+ts = 0.0005 
 
 # Number of time steps
-nsteps = 10000
+nsteps = 200
 
 # Core size, dttm
 epsilon = 0.02 
@@ -45,7 +45,7 @@ overlapRequirement = epsilon
 
 # Enable Local Induction Approximation?
 # If _LIA = False, then the simulation is carried out with M1 KK scheme.
-_LIA = True
+_LIA = False
 
 # Set the numerical core coefficient for the M1 KK scheme
 # c_ttm = -0.4202 was obtained from Knio 2000
@@ -68,14 +68,14 @@ _restart = False
 filename = 'R1.txt'
 
 # Write out data every N steps.
-writeEveryNSteps = 1000
+writeEveryNSteps = 20
 
 # Enable FORTRAN for better performance?
 # NOTE: Works only for the M1 KK method.
 # _partialFORTRAN runs only the uttm computation. Time integration is still handled by python
 # _fullFORTRAN runs the time integration as well. This is faster than _partialFORTRAN
 _partialFORTRAN = False
-_fullFORTRAN = False
+_fullFORTRAN = True
 
 # Include wall boundary condition?
 _image = False
