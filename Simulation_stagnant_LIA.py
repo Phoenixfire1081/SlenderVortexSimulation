@@ -124,7 +124,7 @@ _shear = False
 # If _shear = True, set velocity and height above which flow becomes uniform again.
 maxV = 25.0
 yShear = 1.5
-logspaced = True
+logspaced = False
 
 # Boundary layer flow from data. Set True/False.
 _BL = False
