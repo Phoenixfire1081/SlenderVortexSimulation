@@ -124,6 +124,7 @@ _shear = False
 # If _shear = True, set velocity and height above which flow becomes uniform again.
 maxV = 25.0
 yShear = 1.5
+logspaced = True
 
 # Boundary layer flow from data. Set True/False.
 _BL = False
@@ -175,7 +176,7 @@ Ux, Uy, Uz = initializeAndRun(NP, NF, _dtype, ts, u_tau, nu, delta_nu, nsteps, e
 A, alpha, beta, xinit, yinit, L, _uniform, Ub, _shear, maxV, yShear, _BL, \
 uVelBL, vVelBL, wVelBL, yPlus, gamma_param, m_0_param, delta_0_bar_param, \
 K_M1KK, Phi_M1KK, c_ttm, n_b, _restart, filename, _LIA, overlapRequirement, writeEveryNSteps, \
-_partialFORTRAN, _fullFORTRAN, _image)
+_partialFORTRAN, _fullFORTRAN, _image, logspaced)
 
 if _partialFORTRAN:
 	import os

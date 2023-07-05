@@ -5,7 +5,7 @@ def initializeAndRun(NP, NF, _dtype, ts, u_tau, nu, delta_nu, nsteps, epsilon, n
 A, alpha, beta, xinit, yinit, L, _uniform, Ub, _shear, maxV, yShear, _BL, \
 uVelBL, vVelBL, wVelBL, yPlus, gamma_param_1, m_0_param_1, delta_0_bar_param_1, \
 K_M1KK, Phi_M1KK, c_ttm, n_b, _restart, filename, _LIA, overlapRequirement, writeEveryNSteps, \
-_partialFORTRAN, _fullFORTRAN, _image):
+_partialFORTRAN, _fullFORTRAN, _image, logspaced):
 	
 	if _partialFORTRAN:
 		
@@ -70,7 +70,15 @@ _partialFORTRAN, _fullFORTRAN, _image):
 	# Create filament or read from existing file
 
 	if not _restart:
-		vals = np.linspace(-L, L, NP+2)
+		if not logspaced:
+			vals = np.linspace(-L, L, NP+2)
+		else:
+			vals = np.logspace(-1, 1, int((NP/2)+1))/10
+			vals = vals*L
+			tmp = np.linspace(-L, L, NP+2)
+			tmp[:int((NP/2)+1)] = -vals[::-1]
+			tmp[int((NP/2)+1)+1:] = vals
+			vals = tmp
 		for i in range(NP+2):
 			Ux[i, 0] = xinit + A*np.cos(alpha)*np.exp(-beta*(vals[i])**2)
 			Uy[i, 0] = yinit + A*np.sin(alpha)*np.exp(-beta*(vals[i])**2)
@@ -139,8 +147,6 @@ _partialFORTRAN, _fullFORTRAN, _image):
 			else:
 				fwo.write(str(maxOverlapVal) + ' ' + str(epsilon) + ' 0 ' + str(overlapRequirement) + ' 0 \n')
 			print('Overlap not satisfied')
-			print('Adjust parameters and try again')
-			raise SystemError
 		
 		S_tmp = 0
 		

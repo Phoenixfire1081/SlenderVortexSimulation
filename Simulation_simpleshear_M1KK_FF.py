@@ -16,7 +16,7 @@ start_time = time.time()
 # Author: Abhishek Harikrishnan
 # Email: abhishek.harikrishnan@fu-berlin.de
 # Last updated: 05-07-2023
-# Stagnant flow test template with M1 KK method and python numba mode
+# Simple shear flow test template with M1 KK method and full FORTRAN mode
 
 #---------------------------------------------------------------------#
 
@@ -28,13 +28,13 @@ start_time = time.time()
 
 # Number of points
 # This should be an odd number. 
-NP = 901 
+NP = 1501 
 
 # Time step
-ts = 0.0005 
+ts = 0.001 
 
 # Number of time steps
-nsteps = 200
+nsteps = 500
 
 # Core size, dttm
 epsilon = 0.02 
@@ -68,14 +68,14 @@ _restart = False
 filename = 'R1.txt'
 
 # Write out data every N steps.
-writeEveryNSteps = 20
+writeEveryNSteps = 50
 
 # Enable FORTRAN for better performance?
 # NOTE: Works only for the M1 KK method.
 # _partialFORTRAN runs only the uttm computation. Time integration is still handled by python
 # _fullFORTRAN runs the time integration as well. This is faster than _partialFORTRAN
 _partialFORTRAN = False
-_fullFORTRAN = False
+_fullFORTRAN = True
 
 # Include wall boundary condition?
 _image = False
@@ -119,10 +119,12 @@ _uniform = False
 Ub = 4
 
 # Shear flow. Set True/False.
-_shear = False
+_shear = True
 
 # If _shear = True, set velocity and height above which flow becomes uniform again.
-maxV = 25.0
+# If logspaced = True, the nodes are spaced out unevenly with the outer nodes
+# spaced far apart than the inner nodes. 
+maxV = 30.0
 yShear = 1.5
 logspaced = True
 

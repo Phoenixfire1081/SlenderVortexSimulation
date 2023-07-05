@@ -13,7 +13,7 @@ import os
 
 ignoreList = ['LICENSE', 'plotProfiles.py', 'README.md', 'Simulation_stagnant_LIA.py', \
 'Simulation_stagnant_M1KK.py', 'cleanup.py', 'Plots', 'Profiles', 'src', '.git',\
-'Simulation_stagnant_M1KK_PF.py', 'Simulation_stagnant_M1KK_FF.py']
+'Simulation_stagnant_M1KK_PF.py', 'Simulation_stagnant_M1KK_FF.py', 'Simulation_simpleshear_M1KK_FF.py']
 fileList = os.listdir('.')
 
 for i in fileList:
