@@ -1,6 +1,6 @@
 # Simulation of slender vortex filaments
 
-This page has been setup to support the preprint __*On the motion of hairpin filaments in the atmospheric boundary layer*__ which can be found in arXiv: https://arxiv.org/abs/2303.09302.
+This page has been setup to support the preprint and the paper titled __*On the motion of hairpin filaments in the atmospheric boundary layer*__ which can be found in arXiv: https://arxiv.org/abs/2303.09302 and Physics of Fluids webpage: https://doi.org/10.1063/5.0151078 
 
 Please note that this page is currently __under construction__ and the codes will be uploaded over time.
 
