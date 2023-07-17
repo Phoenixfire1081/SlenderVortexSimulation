@@ -2,8 +2,6 @@
 
 This page has been setup to support the preprint and the paper titled __*On the motion of hairpin filaments in the atmospheric boundary layer*__ which can be found in arXiv: https://arxiv.org/abs/2303.09302 and Physics of Fluids webpage: https://doi.org/10.1063/5.0151078 
 
-Please note that this page is currently __under construction__ and the codes will be uploaded over time.
-
 ## Velocity profiles
 
 The velocity profiles have been uploaded with the permission of Dr. Cedrick Ansorge for three Ekman flow cases: N, S_1, S_2. Case N corresponds to a neutrally stratified case and cases S_1 and S_2 are the stably stratified cases. Details of the simulation can be found in the preprint, Ansorge and Mellado (2014, 2016) and the PhD thesis of Ansorge (2016). The code used for the simulation can be found here: https://github.com/turbulencia/tlab. 
@@ -61,9 +59,15 @@ At t = 0.01, the temporal evolution of the hairpin filament for LIA (left) and M
 At t = 0.1, the temporal evolution of the hairpin filament for LIA (left) and M1 KK (right),<br />
 ![Screenshot](Plots/LIAM1_t0p1.png)
 
-### Pending work
-- Wall impermeability is not fully supported yet. It works in FORTRAN only.
-- Addition of more python template files for simple shear flow and boundary layer flow.
+### Shear background flow
+
+An example template for a shear background flow is given (Simulation_simpleshear_M1KK_FF.py). With the M1 KK method and the full FORTRAN mode, the result is plotted below:
+![Screenshot](Plots/shear_side_front.png)
+
+### ABL background flow
+
+Finally, an example template for an ABL background flow is given (Simulation_BL_M1KK_PF_wall.py). With the M1 KK method and the partial FORTRAN mode with wall boundary condition, the result is plotted below:
+![Screenshot](Plots/BL_side.png)
 
 ## Additional references
 
