@@ -1215,7 +1215,7 @@ IF (MOD(step, writeEveryNSteps) == 0) THEN
 
 ! Write data to file
 OPEN(2, FILE = 'fout.dat', STATUS = 'old', POSITION = 'append')
-DO i = 1, NP+2
+DO i = 1, NP
 WRITE(2, *) Ux(i), Uy(i), Uz(i)
 END DO
 CLOSE(2)
