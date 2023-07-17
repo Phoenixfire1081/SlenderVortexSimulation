@@ -194,6 +194,6 @@ print('Total time taken: ' + str(time.time() - start_time) + ' s')
 
 if _visualize:
 	
-	plotFunc(filename, nsteps, NP, writeEveryNSteps)
+	plotFunc(filename, nsteps, NP, writeEveryNSteps, 1)
 
 
