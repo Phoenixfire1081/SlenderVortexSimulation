@@ -12,9 +12,9 @@ import numpy as np
 
 #---------------------------------------------------------------------#
 
-def plotFunc(filename, nsteps, NP, writeEveryNSteps):
+def plotFunc(filename, nsteps, NP, writeEveryNSteps, scaling):
 	
-	data = np.loadtxt(filename)
+	data = np.loadtxt(filename)*scaling
 	
 	ctrB = 4
 	ctrE = NP-1
