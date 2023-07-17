@@ -69,6 +69,8 @@ An example template for a shear background flow is given (Simulation_simpleshear
 Finally, an example template for an ABL background flow is given (Simulation_BL_M1KK_PF_wall.py). With the M1 KK method and the partial FORTRAN mode with wall boundary condition, the result is plotted below:
 ![Screenshot](Plots/BL_side.png)
 
+These codes have been tested on a Linux machine running Debian 11 (bullseye) with python 3.9.2 and matplotlib 3.3.4. Some codes have been tested on a Mac OS as well. The codes may need to be adapted to work well on other machines. 
+
 ## Additional references
 
 Ansorge, C., & Mellado, J. P. (2014). Global intermittency and collapsing turbulence in the stratified planetary boundary layer. Boundary-layer meteorology, 153(1), 89-116.
